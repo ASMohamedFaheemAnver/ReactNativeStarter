@@ -1,39 +1,18 @@
-import {resources} from '@lang';
+import LanguageProvider from '@provider/LanguageProvider';
 import {persistor, store} from '@redux/store';
-import i18n from 'i18next';
-import React, {useEffect, useState} from 'react';
-import {initReactI18next, useTranslation} from 'react-i18next';
-import {Text, View} from 'react-native';
+import React, {useEffect} from 'react';
+import {useTranslation} from 'react-i18next';
+import {Text} from 'react-native';
 import {Provider as ReduxProvider, useDispatch, useSelector} from 'react-redux';
 import {PersistGate} from 'redux-persist/integration/react';
 
 const App = () => {
-  const [isLanguageLoaded, setIsLanguageLoaded] = useState(false);
-  useEffect(() => {
-    i18n
-      .use(initReactI18next)
-      .init({
-        compatibilityJSON: 'v3',
-        resources: resources,
-        lng: 'tml',
-        fallbackLng: 'en',
-        interpolation: {
-          escapeValue: false,
-        },
-      })
-      .then(_ => {
-        setIsLanguageLoaded(true);
-      })
-      .catch(error => {
-        console.log({error});
-      });
-  }, []);
-  if (!isLanguageLoaded)
-    return <View style={{flex: 1, backgroundColor: 'red'}}></View>;
   return (
     <ReduxProvider store={store}>
       <PersistGate loading={null} persistor={persistor}>
-        <Child></Child>
+        <LanguageProvider loading={null}>
+          <Child></Child>
+        </LanguageProvider>
       </PersistGate>
     </ReduxProvider>
   );
