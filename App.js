@@ -1,4 +1,4 @@
-import {resources} from '@language';
+import {resources} from '@lang';
 import i18n from 'i18next';
 import React, {useEffect, useState} from 'react';
 import {initReactI18next, useTranslation} from 'react-i18next';
