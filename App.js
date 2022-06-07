@@ -1,11 +1,11 @@
 import {resources} from '@lang';
-import {increment} from '@redux/slice/counterSlice';
-import store from '@redux/store';
+import {persistor, store} from '@redux/store';
 import i18n from 'i18next';
 import React, {useEffect, useState} from 'react';
 import {initReactI18next, useTranslation} from 'react-i18next';
 import {Text, View} from 'react-native';
 import {Provider as ReduxProvider, useDispatch, useSelector} from 'react-redux';
+import {PersistGate} from 'redux-persist/integration/react';
 
 const App = () => {
   const [isLanguageLoaded, setIsLanguageLoaded] = useState(false);
@@ -32,7 +32,9 @@ const App = () => {
     return <View style={{flex: 1, backgroundColor: 'red'}}></View>;
   return (
     <ReduxProvider store={store}>
-      <Child></Child>
+      <PersistGate loading={null} persistor={persistor}>
+        <Child></Child>
+      </PersistGate>
     </ReduxProvider>
   );
 };
@@ -43,9 +45,9 @@ const Child = () => {
   const application = useSelector(state => state.application);
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(increment({msg: 'checking'}));
+    // dispatch(changeLanguage('spanish'));
   }, []);
-  console.log({counter, application});
+  console.log({count: counter.count, application});
   return <Text>{t('init')}</Text>;
 };
 
