@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import {useTranslation} from 'react-i18next';
 import {Text} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
-const Child = () => {
+const Home = () => {
   const {t} = useTranslation();
   const counter = useSelector(state => state.counter);
   const application = useSelector(state => state.application);
@@ -11,7 +11,7 @@ const Child = () => {
     // dispatch(changeLanguage('spanish'));
   }, []);
   console.log({count: counter.count, application});
-  return <Text>{t('init')}</Text>;
+  return <Text>{t('Home')}</Text>;
 };
 
-export default Child;
+export default Home;
