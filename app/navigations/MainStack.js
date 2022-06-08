@@ -1,3 +1,4 @@
+import {RouteNames} from '@constants/strings';
 import Loading from '@screens/Loading';
 import React from 'react';
 import BottomTabStack from './BottomTabStack';
@@ -8,11 +9,11 @@ const MainStack = () => {
   const Stack = createStackNavigator();
 
   return (
-    <Stack.Navigator initialRouteName="Loading">
-      <Stack.Screen name="Loading" component={Loading} />
+    <Stack.Navigator initialRouteName={RouteNames.Loading}>
+      <Stack.Screen name={RouteNames.Loading} component={Loading} />
       <Stack.Screen
         options={{headerShown: false}}
-        name="BottomTabStack"
+        name={RouteNames.BottomTabStack}
         component={BottomTabStack}
       />
     </Stack.Navigator>

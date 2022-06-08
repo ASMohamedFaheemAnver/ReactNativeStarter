@@ -1,3 +1,4 @@
+import {Languages} from '@constants/strings';
 import {resources} from '@langs';
 import i18n from 'i18next';
 import {useEffect, useState} from 'react';
@@ -9,13 +10,12 @@ const LanguageProvider = ({children, loading}) => {
     i18n
       .use(initReactI18next)
       .init({
-        compatibilityJSON: 'v3',
-        resources: resources,
-        lng: 'tml',
-        fallbackLng: 'en',
+        lng: Languages.english,
+        fallbackLng: Languages.english,
         interpolation: {
           escapeValue: false,
         },
+        resources: resources,
       })
       .then(_ => {
         setIsLanguageLoaded(true);

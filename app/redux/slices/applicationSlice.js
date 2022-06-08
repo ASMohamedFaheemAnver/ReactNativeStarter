@@ -1,9 +1,10 @@
+import {Languages, SliceNames} from '@constants/strings';
 import {createSlice} from '@reduxjs/toolkit';
 
 export const applicationSlice = createSlice({
-  name: 'application',
+  name: SliceNames.application,
   initialState: {
-    language: 'english',
+    language: Languages.english,
   },
   reducers: {
     changeLanguage: (state, action) => {

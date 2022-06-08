@@ -1,7 +1,8 @@
+import {SliceNames} from '@constants/strings';
 import {createSlice} from '@reduxjs/toolkit';
 
 export const counterSlice = createSlice({
-  name: 'counter',
+  name: SliceNames.counter,
   initialState: {
     count: 0,
   },
