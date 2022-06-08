@@ -1,8 +1,8 @@
 const resources = {
-  en: {
+  english: {
     translation: require('./en.json'),
   },
-  tml: {
+  tamil: {
     translation: require('./tml.json'),
   },
 };
