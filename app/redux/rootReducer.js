@@ -1,6 +1,6 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import application from '@redux/slice/applicationSlice';
-import counter from '@redux/slice/counterSlice';
+import application from '@redux/slices/applicationSlice';
+import counter from '@redux/slices/counterSlice';
 import {combineReducers} from '@reduxjs/toolkit';
 import {persistReducer} from 'redux-persist';
 
