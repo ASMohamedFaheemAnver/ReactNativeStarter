@@ -1,4 +1,5 @@
 import {useQuery} from '@apollo/client';
+import {GET_ALL_COMMENTS_QUERY} from '@graphql/queries/comment';
 import React, {useEffect} from 'react';
 import {useTranslation} from 'react-i18next';
 import {Text} from 'react-native';
@@ -9,6 +10,7 @@ const Home = () => {
   const application = useSelector(state => state.application);
   const dispatch = useDispatch();
 
+  // Defining useQuery will sperm server on every state change
   const {data, error} = useQuery(GET_ALL_COMMENTS_QUERY);
   console.log({data, error});
   useEffect(() => {
