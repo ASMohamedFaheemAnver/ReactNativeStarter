@@ -1,4 +1,4 @@
-import {gql, useQuery} from '@apollo/client';
+import {useQuery} from '@apollo/client';
 import React, {useEffect} from 'react';
 import {useTranslation} from 'react-i18next';
 import {Text} from 'react-native';
@@ -8,16 +8,8 @@ const Home = () => {
   const counter = useSelector(state => state.counter);
   const application = useSelector(state => state.application);
   const dispatch = useDispatch();
-  const DEMO_QUERY = gql`
-    query {
-      comments {
-        data {
-          id
-        }
-      }
-    }
-  `;
-  const {data, error} = useQuery(DEMO_QUERY);
+
+  const {data, error} = useQuery(GET_ALL_COMMENTS_QUERY);
   console.log({data, error});
   useEffect(() => {
     // dispatch(changeLanguage('spanish'));

@@ -1,5 +1,5 @@
 import {ApolloProvider} from '@apollo/client';
-import apolloClient from '@client/apollo';
+import apolloClient from '@graphql/apollo';
 import MainStack from '@navigations/MainStack';
 import LanguageProvider from '@providers/LanguageProvider';
 import {NavigationContainer} from '@react-navigation/native';
