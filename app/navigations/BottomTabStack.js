@@ -12,7 +12,9 @@ const BottomTabStack = () => {
     <BottomTab.Navigator initialRouteName={RouteNames.Home}>
       <BottomTab.Screen
         options={{
-          tabBarIcon: ({color, focused, size}) => <EntypoIcon name="home" />,
+          tabBarIcon: ({color, focused, size}) => (
+            <EntypoIcon color={color} name="home" />
+          ),
         }}
         name={RouteNames.Home}
         component={Home}
@@ -20,7 +22,7 @@ const BottomTabStack = () => {
       <BottomTab.Screen
         options={{
           tabBarIcon: ({color, focused, size}) => (
-            <IoniconsIcon name="person" />
+            <IoniconsIcon color={color} name="person" />
           ),
         }}
         name={RouteNames.Profile}

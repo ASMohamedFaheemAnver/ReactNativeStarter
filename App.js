@@ -1,3 +1,5 @@
+import {ApolloProvider} from '@apollo/client';
+import apolloClient from '@client/apollo';
 import MainStack from '@navigations/MainStack';
 import LanguageProvider from '@providers/LanguageProvider';
 import {NavigationContainer} from '@react-navigation/native';
@@ -12,7 +14,9 @@ const App = () => {
       <PersistGate loading={null} persistor={persistor}>
         <LanguageProvider loading={null}>
           <NavigationContainer>
-            <MainStack />
+            <ApolloProvider client={apolloClient}>
+              <MainStack />
+            </ApolloProvider>
           </NavigationContainer>
         </LanguageProvider>
       </PersistGate>
