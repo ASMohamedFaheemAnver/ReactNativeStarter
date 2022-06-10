@@ -1,5 +1,9 @@
 # Redux Toolkit Quick Start
 # https://redux.js.org/tutorials/quick-start
 
+# useQuery on state change
+# https://github.com/apollographql/apollo-client/issues/9157
+# or try to use useLazyQuery
+
 // ToDo
 # Add for hook

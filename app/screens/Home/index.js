@@ -1,4 +1,4 @@
-import {useQuery} from '@apollo/client';
+import {useLazyQuery} from '@apollo/client';
 import {GET_ALL_COMMENTS_QUERY} from '@graphql/queries/comment';
 import React, {useEffect} from 'react';
 import {useTranslation} from 'react-i18next';
@@ -11,11 +11,16 @@ const Home = () => {
   const dispatch = useDispatch();
 
   // Defining useQuery will sperm server on every state change
-  const {data, error} = useQuery(GET_ALL_COMMENTS_QUERY);
-  console.log({data, error});
+  const [getItem, {data, error, refetch}] = useLazyQuery(
+    GET_ALL_COMMENTS_QUERY,
+  );
+  if (data) {
+    console.log({data, error});
+  }
   useEffect(() => {
     // dispatch(changeLanguage('spanish'));
-  }, []);
+    getItem();
+  }, [getItem]);
   console.log({count: counter.count, application});
   return <Text>{t('Home')}</Text>;
 };
