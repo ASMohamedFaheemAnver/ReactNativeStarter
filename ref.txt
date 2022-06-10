@@ -5,5 +5,8 @@
 # https://github.com/apollographql/apollo-client/issues/9157
 # or try to use useLazyQuery
 
+# Graphql and redux
+# https://www.youtube.com/watch?v=N2q-ZYuQWI8&ab_channel=BenAwad
+
 // ToDo
 # Add for hook
