@@ -18,3 +18,23 @@ export const SliceNames = {
   application: 'application',
   counter: 'counter',
 };
+
+export const fetchPolicyValues = {
+  noCache: 'no-cache',
+};
+
+export const HeaderKeys = {
+  authorization: 'Authorization',
+};
+
+export const AsyncStorageKeys = {
+  authorizationToken: 'token',
+};
+
+export const Patterns = {
+  authorizationHeader: 'Bearer {BearerToken}',
+};
+
+export const ReplaceableTokens = {
+  BearerToken: '{BearerToken}',
+};
