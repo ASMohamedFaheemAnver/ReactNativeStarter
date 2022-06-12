@@ -1,11 +1,13 @@
 import {RouteNames} from '@constants/strings';
-import React, {useEffect} from 'react';
+import {useEffect} from 'react';
+import {useTranslation} from 'react-i18next';
 import {Text} from 'react-native';
 const Loading = ({navigation}) => {
+  const {t} = useTranslation();
   useEffect(() => {
     navigation.navigate(RouteNames.BottomTabStack);
   }, []);
-  return <Text>Loading</Text>;
+  return <Text>{t('Home')}</Text>;
 };
 
 export default Loading;

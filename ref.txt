@@ -9,6 +9,5 @@
 # https://www.youtube.com/watch?v=N2q-ZYuQWI8&ab_channel=BenAwad
 
 // ToDo
-# Add for hook
 # Learn nested map library
 # https://www.youtube.com/watch?v=lQ7t20gFR14&ab_channel=BenAwad

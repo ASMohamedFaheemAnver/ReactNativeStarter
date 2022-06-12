@@ -1,8 +1,7 @@
-import {RouteNames} from '@constants/strings';
+import {IconNames, RouteNames} from '@constants/strings';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Home from '@screens/Home';
 import Profile from '@screens/Profile';
-import React from 'react';
 import EntypoIcon from 'react-native-vector-icons/Entypo';
 import IoniconsIcon from 'react-native-vector-icons/Ionicons';
 
@@ -13,7 +12,7 @@ const BottomTabStack = () => {
       <BottomTab.Screen
         options={{
           tabBarIcon: ({color, focused, size}) => (
-            <EntypoIcon color={color} name="home" />
+            <EntypoIcon color={color} name={IconNames.home} />
           ),
         }}
         name={RouteNames.Home}
@@ -22,7 +21,7 @@ const BottomTabStack = () => {
       <BottomTab.Screen
         options={{
           tabBarIcon: ({color, focused, size}) => (
-            <IoniconsIcon color={color} name="person" />
+            <IoniconsIcon color={color} name={IconNames.person} />
           ),
         }}
         name={RouteNames.Profile}

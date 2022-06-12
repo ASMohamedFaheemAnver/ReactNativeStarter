@@ -38,3 +38,10 @@ export const Patterns = {
 export const ReplaceableTokens = {
   BearerToken: '{BearerToken}',
 };
+
+export const InputFields = {};
+
+export const IconNames = {
+  home: 'home',
+  person: 'person',
+};
