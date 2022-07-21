@@ -13,6 +13,8 @@
 # Diagnose flipper
 # https://fbflipper.com/docs/getting-started/android-native/#diagnostics
 
+# adb shell am start -n <APP_ID>/com.facebook.flipper.android.diagnostics.FlipperDiagnosticActivity
+
 
 // ToDo
 # Learn nested map library
