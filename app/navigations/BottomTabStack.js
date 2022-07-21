@@ -2,6 +2,7 @@ import {IconNames, RouteNames} from '@constants/strings';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Home from '@screens/Home';
 import Profile from '@screens/Profile';
+import React from 'react';
 import EntypoIcon from 'react-native-vector-icons/Entypo';
 import IoniconsIcon from 'react-native-vector-icons/Ionicons';
 

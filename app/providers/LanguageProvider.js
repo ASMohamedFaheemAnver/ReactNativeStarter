@@ -12,6 +12,7 @@ const LanguageProvider = ({children, loading}) => {
       .init({
         lng: Languages.english,
         fallbackLng: Languages.english,
+        compatibilityJSON: 'v3',
         interpolation: {
           escapeValue: false,
         },
