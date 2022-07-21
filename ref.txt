@@ -8,6 +8,12 @@
 # Graphql and redux
 # https://www.youtube.com/watch?v=N2q-ZYuQWI8&ab_channel=BenAwad
 
+# Redux Debugger plugin in Flipper is unavailable
+# https://stackoverflow.com/questions/69538539/redux-debugger-plugin-in-flipper-is-unavailable
+# Diagnose flipper
+# https://fbflipper.com/docs/getting-started/android-native/#diagnostics
+
+
 // ToDo
 # Learn nested map library
 # https://www.youtube.com/watch?v=lQ7t20gFR14&ab_channel=BenAwad
