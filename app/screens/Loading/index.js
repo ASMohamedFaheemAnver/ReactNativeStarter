@@ -5,7 +5,10 @@ import {Text} from 'react-native';
 const Loading = ({navigation}) => {
   const {t} = useTranslation();
   useEffect(() => {
-    navigation.navigate(RouteNames.BottomTabStack);
+    navigation.reset({
+      index: 0,
+      routes: [{name: RouteNames.BottomTabStack}],
+    });
   }, []);
   return <Text>{t('Home')}</Text>;
 };

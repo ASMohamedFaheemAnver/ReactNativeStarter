@@ -1,5 +1,4 @@
-import {useLazyQuery} from '@apollo/client';
-import {GET_ALL_COMMENTS_QUERY} from '@graphql/queries/comment';
+import {useGetAllComments} from '@graphql/actions/comment/queries';
 import {changeLanguage} from '@redux/slices/applicationSlice';
 import React, {useEffect} from 'react';
 import {useTranslation} from 'react-i18next';
@@ -12,9 +11,7 @@ const Home = () => {
   const dispatch = useDispatch();
 
   // Defining useQuery will sperm server on every state change
-  const [getItem, {data, error, refetch}] = useLazyQuery(
-    GET_ALL_COMMENTS_QUERY,
-  );
+  const [getItem, {data, error, refetch}] = useGetAllComments();
   if (data) {
     console.log({data, error});
   }
